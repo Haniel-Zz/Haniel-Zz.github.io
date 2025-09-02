@@ -1,0 +1,172 @@
+.quienes-somos {
+  max-width: 1200px;/*ancho maximo del contenedor*/
+  margin: 50px auto;/*margen arriba y abajo y centrado horizontal*/
+  padding: 0 20px;/*espacio lateral*/
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/*fuente del texto*/
+  color: #333;/*color del texto*/
+}
+
+/* historia */
+.historia h2 {
+  font-size: 36px;/*tamano del encabezado*/
+  color: #2e7d32;/*color verde*/
+  margin-bottom: 20px;/*espacio debajo del encabezado*/
+  text-align: center;/*centra el texto*/
+}
+
+.historia p {
+  font-size: 18px;/*tamano del texto*/
+  line-height: 1.7;/*altura de linea para legibilidad*/
+  text-align: justify;/*justifica el texto*/
+  max-width: 900px;/*ancho maximo del parrafo*/
+  margin: 0 auto 50px;/*centrado horizontal y margen inferior*/
+}
+
+/* equipo medico */
+.equipo h2 {
+  font-size: 36px;/*tamano del encabezado*/
+  color: #2e7d32;/*color verde*/
+  margin-bottom: 30px;/*espacio debajo del encabezado*/
+  text-align: center;/*centra el texto*/
+}
+
+.equipo-cards {
+  display: flex;/*usa flex para organizar las tarjetas*/
+  flex-wrap: wrap;/*permite que las tarjetas se ajusten en varias filas*/
+  justify-content: center;/*centra las tarjetas horizontalmente*/
+  gap: 30px;/*espacio entre tarjetas*/
+}
+
+.equipo-cards .card {
+  background: #f0f8f0;/*fondo de la tarjeta*/
+  padding: 20px;/*espacio interno*/
+  border-radius: 15px;/*bordes redondeados*/
+  text-align: center;/*centra el contenido*/
+  width: 250px;/*ancho fijo de la tarjeta*/
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);/*sombra suave*/
+  transition: transform 0.3s, box-shadow 0.3s;/*transicion para hover*/
+}
+
+.equipo-cards .card:hover {
+  transform: translateY(-5px);/*levanta la tarjeta al pasar el cursor*/
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);/*sombra mas intensa al pasar el cursor*/
+}
+
+.equipo-cards img {
+  width: 150px;/*ancho de la imagen*/
+  height: 150px;/*alto de la imagen*/
+  border-radius: 50%;/*imagen circular*/
+  object-fit: cover;/*recorta la imagen para llenar el contenedor*/
+  margin-bottom: 15px;/*espacio debajo de la imagen*/
+  image-rendering: auto;/*mejora la nitidez*/
+  -webkit-backface-visibility: hidden;/*evita parpadeos en chrome*/
+  -webkit-transform: translateZ(0);/*mejora rendimiento del render*/
+}
+
+/* textos del equipo */
+.equipo-cards h3 {
+  font-size: 20px;/*tamano del nombre*/
+  color: #2e7d32;/*color verde*/
+  margin-bottom: 5px;/*espacio debajo del nombre*/
+}
+
+.equipo-cards p {
+  font-size: 16px;/*tamano del texto descriptivo*/
+  color: #555;/*color gris*/
+}
+
+/* instalaciones */
+.instalaciones h2 {
+  font-size: 36px;/*tamano del encabezado*/
+  color: #2e7d32;/*color verde*/
+  margin: 40px 0 20px;/*margen arriba y abajo*/
+  text-align: center;/*centra el texto*/
+}
+
+.instalaciones p {
+  font-size: 18px;/*tamano del texto*/
+  text-align: center;/*centra el texto*/
+  margin-bottom: 30px;/*espacio debajo del parrafo*/
+}
+
+.instalaciones-imgs {
+  display: flex;/*usa flex para organizar las imagenes*/
+  flex-wrap: wrap;/*permite varias filas*/
+  gap: 20px;/*espacio entre imagenes*/
+  justify-content: center;/*centra las imagenes horizontalmente*/
+}
+
+.instalaciones-imgs img {
+  max-width: 300px;/*ancho maximo de la imagen*/
+  max-height: 200px;/*alto maximo de la imagen*/
+  width: auto;/*ancho automatico*/
+  height: auto;/*alto automatico*/
+  object-fit: cover;/*recorta la imagen para llenar el contenedor*/
+  border-radius: 15px;/*bordes redondeados*/
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);/*sombra suave*/
+  transition: transform 0.3s;/*transicion para hover*/
+  image-rendering: auto;/*mejora nitidez*/
+  -webkit-backface-visibility: hidden;/*evita parpadeos*/
+  -webkit-transform: translateZ(0);/*mejora rendimiento*/
+}
+
+.instalaciones-imgs img:hover {
+  transform: scale(1.05);/*aumenta la imagen al pasar el cursor*/
+}
+
+/* responsivo */
+@media screen and (max-width: 1024px) { /* tablets grandes */
+  .equipo-cards .card {
+    width: 220px; /* tarjeta un poco más pequeña */
+  }
+  .equipo-cards img {
+    width: 130px;
+    height: 130px;
+  }
+  .instalaciones-imgs img {
+    max-width: 250px;
+    max-height: 180px;
+  }
+}
+
+@media screen and (max-width: 768px) { /* tablets y móviles */
+  .equipo-cards {
+    flex-direction: column;/*pone las tarjetas en columna*/
+    align-items: center;/*centra las tarjetas*/
+  }
+
+  .instalaciones-imgs {
+    flex-direction: column;/*pone las imagenes en columna*/
+    align-items: center;/*centra las imagenes*/
+  }
+
+  .historia p {
+    font-size: 16px; /* texto más pequeño en móvil */
+    max-width: 90%; /* ancho reducido */
+  }
+
+  .equipo-cards h3 {
+    font-size: 18px; /* nombre más pequeño */
+  }
+
+  .equipo-cards p {
+    font-size: 15px; /* texto descriptivo más pequeño */
+  }
+
+  .instalaciones p {
+    font-size: 16px; /* texto instalaciones más pequeño */
+    margin: 0 10px 20px; /* margen lateral y inferior ajustado */
+  }
+}
+
+@media screen and (max-width: 480px) { /* celulares */
+  .equipo-cards img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .instalaciones-imgs img {
+    max-width: 200px;
+    max-height: 150px;
+  }
+}

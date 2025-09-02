@@ -1,0 +1,139 @@
+/*contacto*/
+.contacto {
+  padding: 50px 20px;/*espaciado alrededor del formulario*/
+  display: flex;/*organizar los elementos*/
+  flex-direction: column;/* coloca los elementos en columna */
+  align-items: center;/* centra los elementos horizontalmente */
+  gap: 40px;/* espacio entre los elementos */
+  background-color: #f9f9f9;/* color de fondo */
+}
+
+.contacto-info {
+  text-align: center;/* centra el texto */
+  max-width: 600px;/* limita el ancho maximo del bloque */
+}
+
+.contacto-info h2 {
+  font-size: 36px;/* tamaño grande para el encabezado */
+  color: #2e7d32;/* color verde */
+  margin-bottom: 20px;/* espacio debajo del encabezado */
+}
+
+.contacto-info p {
+  font-size: 18px;/* tamaño de fuente para el texto */
+  line-height: 1.6;/* mejora la legibilidad del texto */
+  margin-bottom: 20px;/* espacio debajo del parrafo */
+}
+
+.contacto-info .info p {
+  font-size: 20px;/* tamaño de fuente mas grande */
+  font-weight: bold;/* hace el texto en negrita */
+}
+
+/*redes sociales*/
+.redes {
+  margin-top: 30px;/* espacio superior para las redes sociales */
+}
+
+.redes h3 {
+  font-size: 24px;/* tamaño de fuente para el subtitulo */
+  color: #2e7d32;/* color verde */
+  margin-bottom: 20px;/* espacio debajo del subtitulo */
+}
+
+.social-icons {
+  display: flex;/* organizar los iconos */
+  gap: 20px;/* espacio entre los iconos */
+  justify-content: center;/* centra los iconos horizontalmente */
+}
+
+.social-icon img {
+  width: 40px;/* tamaño fijo de los iconos */
+  height: 40px;/* asegura que los iconos sean cuadrados */
+  object-fit: contain;/* mantiene la imagen dentro del contenedor sin deformarla */
+  transition: transform 0.3s;/* transición suave para el hover  */
+}
+
+.social-icon img:hover {
+  transform: scale(1.2);/* aumenta el tamaño de los iconos al pasar el cursor */
+}
+
+/*imagen de decoracion*/
+.imagen-decorativa {
+  margin-top: 50px;/* espacio superior para la imagen */
+}
+
+.imagen-contacto {
+  width: 100%;/* ancho completo */
+  height: auto;/* ajusta la altura automaticamente */
+  border-radius: 15px;/* bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* sombra alrededor de la imagen */
+}
+
+.imagen-decorativa img {
+  width: 100%;/* ancho completo */
+  height: auto;/* ajusta la altura automaticamente */
+  border-radius: 15px;/* bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* sombra alrededor de la imagen */
+}
+
+/*responsivo para movil */
+@media screen and (max-width: 768px) { /* tablets y pantallas medianas */
+  .contacto {
+    padding: 30px 20px;/* reduce el espaciado en pantallas pequeñas */
+  }
+
+  .contacto-info {
+    text-align: center;/* centra el texto en pantallas pequeñas */
+  }
+
+  .contacto-info h2 {
+    font-size: 28px;/* reduce tamaño del encabezado */
+  }
+
+  .contacto-info p {
+    font-size: 16px;/* texto mas compacto */
+  }
+
+  .social-icons {
+    gap: 15px;/* reduce el espacio entre los iconos */
+  }
+
+  .imagen-contacto {
+    width: 90%;/* reduce el tamaño de la imagen */
+    max-width: 500px;/* limita el tamaño maximo de la imagen */
+  }
+}
+
+@media screen and (max-width: 480px) { /* celulares */
+  .contacto {
+    padding: 20px 15px;/* reduce padding */
+    gap: 30px;/* menos espacio entre elementos */
+  }
+
+  .contacto-info h2 {
+    font-size: 24px;/* encabezado mas pequeño */
+  }
+
+  .contacto-info p {
+    font-size: 15px;/* texto mas legible en movil */
+  }
+
+  .contacto-info .info p {
+    font-size: 18px;/* ajusta negrita para movil */
+  }
+
+  .social-icons {
+    gap: 10px;/* menos espacio entre iconos */
+  }
+
+  .social-icon img {
+    width: 35px;/* iconos mas pequeños */
+    height: 35px;/* iconos mas pequeños */
+  }
+
+  .imagen-contacto {
+    width: 100%;/* ocupa todo el ancho */
+    max-width: 100%;/* asegura que no se desborde */
+  }
+}

@@ -1,0 +1,197 @@
+/*igmagen portada*/
+.banner {
+  margin-top: 20px; /*añade un espacio extra debajo del menu*/
+  position: relative; /*necesario para posicionar el texto sobre la imagen*/
+  text-align: center; /*centra el texto dentro del contenedor*/
+  color: white; /*color del fondo del baner*/
+}
+
+.banner-img {
+  width: 400px; /*ancho de la imagen */
+  height: 200px; /*altura ajustable del banner*/
+  object-fit: cover; /*hace que la imagen llene el area sin distorsionarse*/
+  border-radius: 15px; /*bordes redondeados para la imagen*/
+}
+
+.banner-text {
+  position: absolute; /*posiciona el texto de forma absoluta dentro del contenedor*/
+  top: 50%; /*centra el texto verticalmente*/
+  left: 50%; /*centra el texto horizontalmente*/
+  transform: translate(-50%, -50%); /*ajusta para un verdadero centro*/
+}
+
+.banner-text h1 {
+  font-size: 48px; /*tamaño de fuente grande para el titulo*/
+  font-weight: bold; /*Negrita para mayor enfasis*/
+  margin-bottom: 10px; /*espacio debajo del titulo */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /*sombra para mejorar la legibilidad*/
+}
+
+.banner-text p {
+  font-size: 20px; /*tamaño de fuente para el texto descriptivo*/
+  margin-bottom: 20px; /*espacio debajo del parrafo*/
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /*sombra sutil para el parrafo*/
+}
+
+.btn {
+  background-color: #43a047; /*fondo verde para el boton*/
+  color: white; /*texto blanco en el boton*/
+  padding: 12px 25px; /*epaciado interno del botón*/
+  border-radius: 8px; /*bordes redondeados*/
+  text-decoration: none; /*elimina subrayado*/
+  font-weight: bold; /*texto en negrita*/
+  transition: background 0.3s, transform 0.2s; /*Transición suave para cambios "si quieren pueden ajustarlo equipo"*/
+}
+
+.btn:hover {
+  background-color: #2e7d32; /*fondo oscuro al pasar el cursor*/
+  transform: translateY(-3px); /*efecto de movimiento al pasar el cursor*/
+}
+
+/*sobre nosotros*/
+.sobre-nosotros {
+  text-align: center; /*centra el texto*/
+  margin: 50px 20px; /*añade espacio alrededor del bloque*/
+}
+
+.sobre-nosotros h2 {
+  font-size: 36px; /*tamaño grande para el subtitulo*/
+  color: #2e7d32; /*color verde*/
+  margin-bottom: 20px; /*espacio debajo del subtitulo*/
+}
+
+.sobre-nosotros p {
+  font-size: 18px; /*tamaño de fuente del parrafo*/
+  line-height: 1.6; /*mejora la legibilidad del texto*/
+  max-width: 800px; /*limita el ancho maximo del texto*/
+  margin: 0 auto; /*centra el parrafo*/
+}
+
+/*servicioss*/
+.servicios {
+  text-align: center; /*centra el texto*/
+  margin: 50px 20px; /*Espacio alrededor del bloque*/
+}
+
+.servicios h2 {
+  font-size: 36px; /*tamaño grande para el subtitulo*/
+  color: #2e7d32; /*Color verde*/
+  margin-bottom: 30px; /*espacio debajo del subtitulo*/
+}
+
+.cards-servicios {
+  display: flex; /*muestra los servicios en una fila*/
+  gap: 20px; /*espacio entre las tarjetas*/
+  flex-wrap: wrap; /*permite que las tarjetas se ajusten en varias lineas */
+  justify-content: center; /*centra las tarjetas*/
+}
+
+.card-servicio {
+  background: #43a047; /*fondo verde de la tarjeta*/
+  color: white; /*texto blanco en las tarjetas*/
+  padding: 25px; /*espaciado interno*/
+  border-radius: 12px; /*bordes redondeados*/
+  flex: 1 1 180px; /*flexibilidad en el tamaño de las tarjetas*/
+  text-align: center; /*centra el texto dentro de las tarjetas*/
+  font-weight: bold; /*texto en negrita*/
+  font-size: 18px; /*tamaño de fuente*/
+  transition: transform 0.3s, background 0.3s; /*transicion para efectos de hover "ajustable si quieren" */
+}
+
+.card-servicio:hover {
+  transform: translateY(-5px); /*efecto de desplazamiento al pasar el cursor*/
+  background: #2e7d32; /*Cambio de color de fondo en hover*/
+}
+
+/*mini galeria o imagenes*/
+.galeria-mini {
+  text-align: center; /*centra el texto*/
+  margin: 50px 20px; /*espacio alrededor del bloque*/
+}
+
+.galeria-mini h2 {
+  font-size: 36px; /*tamaño grande para el subtitulo*/
+  color: #2e7d32; /*color verde para resaltar*/
+  margin-bottom: 30px; /*espacio debajo del subtitulo*/
+}
+
+.mini-imgs {
+  display: flex; /*muestra las imagenes en una fila*/
+  justify-content: center; /*centra las imagenes*/
+  flex-wrap: wrap; /*permite que las imagenes se ajusten en varias lineas*/
+  gap: 20px; /*espacio entre las imagenes*/
+}
+
+.mini-imgs img {
+  width: 250px; /*ancho fijo para las imagenes*/
+  height: 200px; /*alto fijo para las imagenes*/
+  object-fit: cover; /*recorta la imagen para llenar el contenedor*/
+  border-radius: 12px; /*bordes redondeados para las imagenes*/
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /*sombra alrededor de las imagenes*/
+  transition: transform 0.3s; /*transición para el efecto de hover "ajustable tambien si quieren"*/
+}
+
+.mini-imgs img:hover {
+  transform: scale(1.05); /*efecto de zoom al pasar el cursor*/
+}
+
+/*responsive movil */
+@media screen and (max-width: 1024px) { /* tablets grandes */
+  .banner-img {
+    width: 300px; /*reduce el ancho del banner*/
+    height: 160px; /*reduce altura*/
+  }
+
+  .banner-text h1 {
+    font-size: 40px; /*titulo más pequeño en tablets*/
+  }
+
+  .banner-text p {
+    font-size: 18px; /*texto más pequeño en tablets*/
+  }
+
+  .mini-imgs img {
+    width: 200px; /*imagen más pequeña en tablets*/
+    height: 160px; /*altura ajustada*/
+  }
+}
+
+@media screen and (max-width: 768px) { /* tablets y moviles */
+  .cards-servicios {
+    flex-direction: column; /*cambia a una columna en pantallas pequeñas*/
+  }
+
+  .mini-imgs img {
+    width: 80%; /*ancho mas pequeño en pantallas pequeñas*/
+    height: auto; /*ajusta la altura automaticamente*/
+  }
+
+  .banner-img {
+    width: 80%; /*banner ocupa la mayor parte del ancho*/
+    height: auto; /*altura automática para mantener proporción*/
+  }
+
+  .banner-text h1 {
+    font-size: 32px; /*tamaño mas pequeño para el titulo en celular*/
+  }
+
+  .banner-text p {
+    font-size: 16px; /*tamaño mas pequeño para el texto en celular*/
+  }
+}
+
+@media screen and (max-width: 480px) { /* celulares */
+  .sobre-nosotros p {
+    font-size: 16px; /*texto más legible en celular*/
+  }
+
+  .servicios h2,
+  .galeria-mini h2 {
+    font-size: 28px; /*subtitulos más pequeños en celular*/
+  }
+
+  .card-servicio {
+    font-size: 16px; /*tarjetas más compactas*/
+    padding: 20px; /*menos padding interno*/
+  }
+}

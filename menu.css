@@ -1,0 +1,132 @@
+/* contenedor del menu */
+.menu {
+  position: fixed;/*menu fijo en la pantalla*/
+  top: 0;/*arriba de todo*/
+  width: 100%;/*ancho completo*/
+  display: flex;/*usa flex para organizar los elementos*/
+  align-items: center;/*centra verticalmente*/
+  justify-content: center;/*centra horizontalmente*/
+  background: linear-gradient(90deg, #2e7d32, #43a047);/*fondo degradado*/
+  padding: 10px 20px;/*espaciado interno*/
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);/*sombra ligera*/
+  z-index: 1000;/*sobre todo el contenido*/
+  flex-wrap: wrap;/*permite ajustar elementos a varias filas*/
+}
+
+/* logo */
+.menu .logo img {
+  height: 60px;/*alto del logo*/
+  width: 150px;/*ancho del logo*/
+  transition: all 0.3s;/*suaviza cambios de tamaño*/
+}
+
+/* lista del menu */
+.menu ul {
+  list-style: none;/*quita viñetas*/
+  margin: 0;/*sin margen*/
+  padding: 0;/*sin padding*/
+  display: flex;/*usa flex para organizar enlaces*/
+  gap: 20px;/*espacio entre enlaces*/
+  flex-wrap: wrap;/*permite bajar a otra fila si es necesario*/
+  justify-content: center;/*centra enlaces*/
+  overflow-x: auto;/*scroll horizontal si no caben*/
+}
+
+/* elimina scrollbar visible */
+.menu ul::-webkit-scrollbar {
+  display: none;/*oculta scrollbar en webkit*/
+}
+.menu ul {
+  -ms-overflow-style: none;/*oculta scrollbar en ie y edge*/
+  scrollbar-width: none;/*oculta scrollbar en firefox*/
+}
+
+/* elementos de la lista */
+.menu li {
+  display: inline-block;/*alinear en linea*/
+}
+
+/* links del menu */
+.menu a {
+  color: white;/*color del texto*/
+  text-decoration: none;/*sin subrayado*/
+  font-weight: bold;/*negrita*/
+  font-size: 16px;/*tamano del texto*/
+  padding: 8px 12px;/*espaciado interno*/
+  border-radius: 8px;/*bordes redondeados*/
+  transition: background 0.3s, transform 0.2s;/*transiciones suaves*/
+  white-space: nowrap;/*no rompe texto*/
+}
+
+/* efecto hover */
+.menu a:hover {
+  background: rgba(255,255,255,0.2);/*fondo semitransparente al pasar cursor*/
+  transform: translateY(-3px);/*levanta el enlace*/
+}
+
+/* pagina activa */
+.menu a.active {
+  background: rgba(0,0,0,0.15);/*fondo diferente para pagina activa*/
+  box-shadow: inset 0 -3px 0 rgba(255,255,255,0.1);/*linea inferior*/
+}
+
+/* espacio para el contenido */
+body {
+  padding-top: 90px;/*espacio superior para que no quede debajo del menu*/
+}
+
+/* responsive para pantallas medianas */
+@media screen and (max-width: 1024px) {
+  .menu .logo img {
+    height: 50px;/*logo mas pequeño*/
+    width: 120px;
+  }
+
+  .menu a {
+    font-size: 15px;/*texto un poco mas pequeño*/
+    padding: 6px 10px;/*menos padding*/
+  }
+}
+
+/* responsive para tablets y moviles */
+@media screen and (max-width: 768px) {
+  .menu {
+    justify-content: center;/*centra logo y enlaces*/
+  }
+
+  .menu ul {
+    justify-content: center;/*centra los enlaces*/
+    gap: 15px;/*menos espacio entre enlaces*/
+  }
+
+  .menu .logo img {
+    height: 45px;/*logo mas pequeño*/
+    width: 110px;
+  }
+
+  .menu a {
+    font-size: 14px;/*texto mas pequeño*/
+    padding: 5px 8px;
+  }
+
+  body {
+    padding-top: 120px;/*espacio superior suficiente*/
+  }
+}
+
+/* responsive para pantallas muy pequenas */
+@media screen and (max-width: 480px) {
+  .menu .logo img {
+    height: 40px;/*logo mas pequeño*/
+    width: 100px;
+  }
+
+  .menu a {
+    font-size: 13px;/*texto mas pequeno*/
+    padding: 5px 6px;
+  }
+
+  body {
+    padding-top: 140px;/*espacio suficiente para menu*/
+  }
+}

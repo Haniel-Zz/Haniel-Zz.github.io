@@ -1,0 +1,135 @@
+body {
+  margin: 0;/* elimina margen por defecto */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/* fuente para todo el cuerpo */
+  background: linear-gradient(135deg,#e8f5e9,#ffffff);/* fondo  */
+  color: #222;/* color de texto oscuro */
+}
+
+/*contenido*/
+section.wrapper{
+  padding: 50px 20px;/* espaciado dentro del contenedor */
+  max-width: 1000px;/* ancho maximo para el contenido */
+  margin: 20px auto;/* margen superior e inferior y centrado */
+}
+h2{
+  font-size: 32px;/* tamaño grande para el encabezado */
+  color: #1b5e20;/* color verde oscuro */
+  text-align: center;/* centra el texto */
+  margin-bottom: 40px;/* espacio debajo del encabezado */
+  position: relative;/* necesario para el elemento */
+}
+h2::after{
+  content:"";/* crea un elemento vacio */
+  display:block;/* hace que sea un bloque */
+  width:90px;/* ancho de la linea debajo del encabezado */
+  height:5px;/* alto de la linea */
+  background:#43a047;/* color de la linea */
+  margin:12px auto;/* centrado de la linea */
+  border-radius:3px;/* bordes redondeados en la linea */
+}
+
+.card-main{
+  background:#ffffff;/* fondo blanco para la tarjeta */
+  padding: 30px;/* espaciado dentro de la tarjeta */
+  border-radius: 20px;/* bordes redondeados */
+  box-shadow:0 12px 30px rgba(23,80,27,0.08);/* sombra alrededor de la tarjeta */
+}
+.card-main h3{
+  color:#2e7d32;/* color verde para el subtitulo */
+  margin-top:25px;/* espacio arriba del subtitulo */
+  font-size:24px;/* tamaño de fuente para el subtitulo */
+  border-left:6px solid #66bb6a;/* linea en el lado izquierdo */
+  padding-left:10px;/* espacio entre la linea y el texto */
+}
+.card-main p{
+  line-height:1.7;/* altura de linea*/
+  font-size:16.5px;/* tamaño de fuente para el parrafo */
+  color:#333;/* color del texto */
+}
+
+/*vaalores*/
+.valores{
+  display:grid;/* organizar los valores */
+  gap:20px;/* espacio entre los elementos */
+  margin-top:25px;/* margen superior */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));/* crea columnas que se ajustan automaticamente */
+}
+.valor{
+  border-radius:14px;/* bordes redondeados */
+  padding:18px;/* espaciado dentro de la tarjeta */
+  color:white;/* texto blanco */
+  min-height:110px;/* altura minima de las tarjetas */
+  display:flex;/*para el contenido */
+  flex-direction:column;/* coloca los elementos en columna */
+  justify-content:center;/* centra el contenido verticalmente */
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);/* sombra alrededor de la tarjeta */
+  transition:transform .22s ease, box-shadow .22s ease;/* transicion para el efecto hover */
+}
+.valor:hover{
+  transform:translateY(-8px);/* eleva la tarjeta al pasar el cursor */
+  box-shadow:0 18px 34px rgba(0,0,0,0.18);/* intensifica la sombra */
+}
+.valor h4{
+  margin:0 0 8px;/* espacio entre el titulo y el texto */
+  font-size:18px;/* tamaño de fuente para el titulo */
+}
+.valor p{
+  margin:0;/* elimina el margen */
+  font-size:14.5px;/* tamaño de fuente para el parrafo */
+  opacity:0.95;/* hace el texto ligeramente transparente */
+}
+
+/* colores de tarjetas */
+.v-amarillo{ background: linear-gradient(135deg,#ffb74d,#ffcc80); color:#2b2b2b;}/* fondo amarillo */
+.v-verde{ background: linear-gradient(135deg,#66bb6a,#43a047); }/* fondo verde */
+.v-celeste{ background: linear-gradient(135deg,#4fc3f7,#29b6f6); }/* fondo celeste */
+.v-lila{ background: linear-gradient(135deg,#9575cd,#b39ddb); }/* fondo lila */
+.v-rosa{ background: linear-gradient(135deg,#f06292,#f48fb1); }/* fondo rosa */
+.v-naranja{ background: linear-gradient(135deg,#ff8a65,#ffab91); color:#2b2b2b;}/* fondo naranja */
+
+/* responsivo para movil */
+@media (max-width: 768px){ /* reglas para tablets y pantallas medianas */
+  h2{
+    font-size: 26px;/* reduce tamaño del encabezado */
+  }
+  .card-main{
+    padding:20px;/* menos espaciado en tarjetas */
+  }
+  .card-main h3{
+    font-size:20px;/* subtitulo mas pequeño */
+  }
+  .card-main p{
+    font-size:15px;/* parrafos mas compactos */
+  }
+}
+
+@media (max-width: 480px){ /* reglas para celulares */
+  section.wrapper{
+    padding: 30px 15px;/* menos padding */
+    margin: 10px auto;/* menos margen */
+  }
+  h2{
+    font-size:22px;/* encabezado mas pequeño */
+  }
+  h2::after{
+    width:60px;/* linea mas corta debajo del titulo */
+    height:4px;/* linea mas delgada */
+  }
+  .card-main{
+    padding:15px;/* menos espacio interno */
+    border-radius:14px;/* esquinas menos redondeadas */
+  }
+  .card-main h3{
+    font-size:18px;/* subtitulo mas pequeño */
+  }
+  .card-main p{
+    font-size:14px;/* texto mas legible en movil */
+    line-height:1.5;/* menor interlineado */
+  }
+  .valor h4{
+    font-size:16px;/* titulo de valores mas pequeño */
+  }
+  .valor p{
+    font-size:13px;/* parrafo mas pequeño */
+  }
+}
