@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>4 Meses Contigo ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #ff758c, #ff7eb3);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            animation: fadeIn 2s ease;
+        }
+
+        header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 35px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            animation: slideUp 1.5s ease;
+        }
+
+        .card h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.6rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .fechas {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .fecha {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 20px;
+            border-radius: 15px;
+            width: 280px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .fecha span {
+            font-size: 2rem;
+            display: block;
+        }
+
+        /* CARTAS */
+        .cartas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .carta {
+            perspective: 1000px;
+        }
+
+        .carta-inner {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .carta:hover .carta-inner {
+            transform: rotateY(180deg);
+        }
+
+        .carta-front,
+        .carta-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .carta-front {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2rem;
+            color: #b3003b;
+        }
+
+        .carta-back {
+            background: rgba(255, 255, 255, 0.95);
+            color: #d6336c;
+            transform: rotateY(180deg);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Corazones */
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            font-size: 20px;
+            animation: floatUp 8s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-120vh); opacity: 0; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Felices 4 Meses, Mi Amor ❤️</h1>
+    <p>28 de enero del 2026</p>
+</header>
+
+<div class="contenedor">
+
+    <div class="card">
+        <h2>Nuestra Historia ✨</h2>
+        <p>
+            Desde el <strong>28 de septiembre del 2025</strong> mi vida es más bonita.
+            No solo porque te tengo, sino porque contigo aprendí
+            que amar es elegir, cuidar y sonreír todos los días.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Fechas que amo 💕</h2>
+        <div class="fechas">
+            <div class="fecha">
+                <span>💑</span>
+                <strong>28/09/25</strong>
+                <p>El día que te convertiste en mi novia y en mi lugar favorito.</p>
+            </div>
+            <div class="fecha">
+                <span>❤️</span>
+                <strong>28/01/26</strong>
+                <p>Cuatro meses contigo y cada uno mejor que el anterior.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Cartas Para Ti 💌</h2>
+        <p>Destapa cada una… están llenas de lo que siento por ti.</p>
+
+        <div class="cartas">
+
+            <div class="carta">
+                <div class="carta-inner">
+                    <div class="carta-front">💖 Ábreme</div>
+                    <div class="carta-back">
+                        No sabía que alguien podía gustarme tanto
+                        hasta que llegaste tú y te volviste
+                        mi pensamiento favorito.
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="carta">
+                <div class="carta-inner">
+                    <div class="carta-front">💌 Para ti</div>
+                    <div class="carta-back">
+                        Si supieras lo bonita que te ves cuando sonríes,
+                        entenderías por qué me enamoras
+                        incluso sin intentarlo.
+                    </div>
+                </div>
+            </div>
+
+            <div class="carta">
+                <div class="carta-inner">
+                    <div class="carta-front">🔥 Secreto</div>
+                    <div class="carta-back">
+                        Pensarte provoca sonrisas tontas,
+                        mariposas en el estómago
+                        y muchas ganas de verte.
+                    </div>
+                </div>
+            </div>
+
+            <div class="carta">
+                <div class="carta-inner">
+                    <div class="carta-front">🌹 Mi amor</div>
+                    <div class="carta-back">
+                        No eres solo mi novia,
+                        eres mi lugar seguro,
+                        mi persona favorita
+                        y mi mejor coincidencia.
+                    </div>
+                </div>
+            </div>
+
+            <div class="carta">
+                <div class="carta-inner">
+                    <div class="carta-front">😏 Coqueta</div>
+                    <div class="carta-back">
+                        Desde que estás conmigo,
+                        cualquier cosa es excusa
+                        para pensar en ti.
+                    </div>
+                </div>
+            </div>
+
+            <div class="carta">
+                <div class="carta-inner">
+                    <div class="carta-front">❤️ Promesa</div>
+                    <div class="carta-back">
+                        Prometo seguir celebrando meses,
+                        abrazos y besos contigo,
+                        porque contigo todo se siente bien.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    Hecho con amor infinito 💖 <br>
+    Para la dueña de mi corazón
+</footer>
+
+<span class="heart" style="left:10%">❤️</span>
+<span class="heart" style="left:30%; animation-delay:2s">💖</span>
+<span class="heart" style="left:50%; animation-delay:4s">💕</span>
+<span class="heart" style="left:70%; animation-delay:1s">💘</span>
+<span class="heart" style="left:90%; animation-delay:3s">❤️</span>
+
+</body>
+</html>
